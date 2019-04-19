@@ -1,0 +1,36 @@
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Arcangeluz | En comunión con los ángeles
+    link(href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet")
+    block styles
+      link(rel="stylesheet" href="/static/css/styles.css")
+  body
+    .container#container
+      header.header
+        h2.header__brand
+          a(href="/") arcangeluz
+        nav.header__menu#menu
+          ul
+            li
+              a(href="/angelarium") angelarium
+            li
+              a(href="/angelus") angelus
+            li
+              a(href="/sonos") sonos
+        .hamburger-menu#hamburger-menu
+          .bar.top-bar
+          .bar.middle-bar
+          .bar.bottom-bar
+      block content
+      footer.footer
+        .footer__platform
+          p Una plataforma de
+            a(href="https://chamelimantra.com/") Chameli Mantra
+        .footer__terms
+          a Política de Privacidad
+
+    block scripts
+      script(src="/static/js/menu.js")

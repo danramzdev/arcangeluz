@@ -1,0 +1,19 @@
+extends ../layout
+
+block styles
+  link(rel="stylesheet" href="/static/css/styles.angelarium.css")
+
+block content
+  section.section
+    .contenedor
+      form.formulario#formulario(action="" method="post")
+        h3 ¿Quién es tu ángel protector?
+        p Ingresa tu fecha de nacimiento y descubre quién es tu ángel y tu arcángel guardián...
+        .inputs-container
+          select.form-control#dia(name="dia")
+          select.form-control#mes(name="mes")
+          select.form-control#year(name="year")
+          button.boton(type="submit") DESCUBRIR
+
+block append scripts
+  script(src="/static/js/index.angelarium.js")
