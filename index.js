@@ -21,10 +21,10 @@ app.set("view engine", "pug");
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 // Routes
-require("./routes/views")(app);
-require("./routes/views/sonos")(app);
-require("./routes/views/angelus")(app);
-require("./routes/views/angelarium")(app);
+require("./routes")(app);
+require("./routes/sonos")(app);
+require("./routes/angelus")(app);
+require("./routes/angelarium")(app);
 
 async function dbInit() {
   const mongo = new Mongo();
