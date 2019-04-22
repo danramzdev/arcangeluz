@@ -1,11 +1,10 @@
-const express = require('express');
+const express = require("express");
+const angelariumController = require("../../../controllers/angelariumController");
 
 module.exports = app => {
   const router = express.Router();
 
   app.use("/angelarium", router);
 
-  router.get("/", (req, res) => {
-    res.render("angelarium/index");
-  });
+  router.get("/", angelariumController.index);
 };
