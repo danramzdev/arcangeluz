@@ -1,7 +1,7 @@
-class Angelarium {
+class AngelariumController {
   static index(req, res) {
     res.render("angelarium/index");
   }
 }
 
-module.exports = Angelarium;
+module.exports = AngelariumController;

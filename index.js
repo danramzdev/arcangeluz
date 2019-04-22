@@ -9,6 +9,9 @@ const {
   config: { port }
 } = require("./config");
 
+// Controllers requires
+const angelariumController = require("./controllers/angelarium");
+
 // Express init
 const app = express();
 
@@ -23,7 +26,7 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 require("./routes")(app);
 require("./routes/sonos")(app);
 require("./routes/angelus")(app);
-require("./routes/angelarium")(app);
+require("./routes/angelarium")(app, angelariumController);
 
 // Server init
 app.listen(port, () => {
