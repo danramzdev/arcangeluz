@@ -18,6 +18,10 @@ const sonosController = require("./controllers/sonos");
 // Express init
 const app = express();
 
+// Middleware parsing
+app.use(express.json()); // for parsing application/json
+app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // Template Engine Set
 app.set("views", "./views");
 app.set("view engine", "pug");
