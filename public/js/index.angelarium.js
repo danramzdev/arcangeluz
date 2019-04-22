@@ -13,8 +13,8 @@
     "Noviembre",
     "Diciembre"
   ];
-  const dia = document.getElementById("dia");
-  const mes = document.getElementById("mes");
+  const dia = document.getElementById("day");
+  const mes = document.getElementById("month");
   const year = document.getElementById("year");
   const maxDia = 31;
   let n = 0;
