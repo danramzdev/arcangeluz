@@ -19,7 +19,7 @@ if (argv.clear) {
   mongo.connect().then(db => {
     db.collection("arcangeles").drop(err => {
       if (err) throw err;
-      console.log(chalk.red("Datos eliminados satisfactoriamente"));
+      console.log(chalk.yellow("Datos eliminados satisfactoriamente"));
       mongo.disconnect();
     });
   });
