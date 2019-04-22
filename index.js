@@ -5,7 +5,6 @@ const express = require("express");
 const path = require("path");
 
 // Project requires
-const Mongo = require("./db/mongo");
 const {
   config: { port }
 } = require("./config");
