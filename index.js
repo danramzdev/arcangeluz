@@ -26,13 +26,6 @@ require("./routes/sonos")(app);
 require("./routes/angelus")(app);
 require("./routes/angelarium")(app);
 
-async function dbInit() {
-  const mongo = new Mongo();
-  const db = await mongo.connect();
-}
-
-dbInit();
-
 // Server init
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
