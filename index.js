@@ -10,7 +10,10 @@ const {
 } = require("./config");
 
 // Controllers requires
+const indexController = require("./controllers");
 const angelariumController = require("./controllers/angelarium");
+const angelusController = require("./controllers/angelus");
+const sonosController = require("./controllers/sonos");
 
 // Express init
 const app = express();
@@ -23,9 +26,9 @@ app.set("view engine", "pug");
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 // Routes
-require("./routes")(app);
-require("./routes/sonos")(app);
-require("./routes/angelus")(app);
+require("./routes")(app, indexController);
+require("./routes/sonos")(app, sonosController);
+require("./routes/angelus")(app, angelusController);
 require("./routes/angelarium")(app, angelariumController);
 
 // Server init

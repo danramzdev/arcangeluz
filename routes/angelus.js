@@ -1,11 +1,9 @@
 const express = require('express');
 
-module.exports = app => {
+module.exports = (app, controller) => {
   const router = express.Router();
 
   app.use("/angelus", router);
 
-  router.get("/", (req, res) => {
-    res.render("angelus");
-  });
+  router.get("/", controller.index);
 };

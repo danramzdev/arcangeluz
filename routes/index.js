@@ -1,5 +1,3 @@
-module.exports = app => {
-  app.get("/", (req, res) => {
-    res.render("index");
-  });
+module.exports = (app, controller) => {
+  app.get("/", controller.index);
 };
