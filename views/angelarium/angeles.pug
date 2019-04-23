@@ -1,0 +1,54 @@
+extends ../layout
+
+block styles
+  link(rel="stylesheet" href="/static/css/styles.angelarium.css")
+
+block content
+  section.section
+    section.section-results#angel-container
+      .results-container#angel
+        .results
+          figure.imagen
+            img(src="https://s3.amazonaws.com/mltmda-arcangeluz/Angelarium/Angelarium+Angel+v0987.jpg" alt="imagen-angel")
+          .caracteristicas
+            h4.nombre Anemaneme
+            p.periodo Periodo: Del
+              |
+              |
+              span 1 de Enero al
+            <?php echo $data['dia2'].' de '.$data['mes2']; ?></span></p>
+            <p class="descripcion">
+            <?php echo $data['descripcion'] ?>
+            </p>
+            <button class="enlace" id="boton-arcangel">
+            <a href="#angel-container">REVELA ARCÁNGEL</a>
+            </button>
+            </div>
+            </div>
+            </div>
+            <div class="results-container fuera-arcangel" id="arcangel">
+            <div class="results">
+            <figure class="imagen">
+            <img src="<?php echo $dataArc['imagen']; ?>" alt="arcangel-<?php echo $dataArc['nombre']?>" />
+            </figure>
+            <div class="caracteristicas">
+            <h4 class="nombre">Arcángel
+            <?php echo $dataArc['nombre'];?>
+            </h4>
+            <p class="periodo">Día de la semana:
+            <?php echo $dataArc['dia'];?>
+            </p>
+            <p class="descripcion">
+            <?php echo $dataArc['descripcion'] ?>
+            </p>
+            <button class="enlace">
+            <a href="<?php echo $dataArc['enlace']; ?>" target="_blank">SABER MÁS</a>
+            </button>
+            <button class="enlace" id="boton-angel">
+            <a href="#angel-container">REVELA ÁNGEL</a>
+            </button>
+            </div>
+            </div>
+            </div>
+            </section>
+            </section>
