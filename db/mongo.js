@@ -6,13 +6,11 @@ const {
 
 const mongoURL = `mongodb://${dbHost}:${dbPort}`;
 
-class Mongo {
-  constructor() {
-    this.instance = null;
-    this.disconnecting = false;
-  }
+module.exports = (() => {
+  let instance = null,
+    disconnecting = false;
 
-  connect() {
+  function connect() {
     return new Promise((res, rej) => {
       MongoClient.connect(
         mongoURL,
@@ -20,30 +18,72 @@ class Mongo {
         (err, client) => {
           if (err) rej(err);
           console.log("Conectado a la base de datos satisfactoriamente");
-          this.instance = client;
+          instance = client;
           res(client.db(dbName));
         }
       );
     });
   }
 
-  disconnect() {
+  function disconnect() {
     return new Promise((res, rej) => {
-      if (this.instance && !this.disconnecting) {
-        this.disconnecting = true;
+      if (instance && !disconnecting) {
+        disconnecting = true;
         console.log("Desconectando instancia de Mongo");
-        this.instance.close(err => {
+        instance.close(err => {
           if (err) {
             rej(err);
-            this.disconnecting = false;
+            disconnecting = false;
             return;
           }
-          console.log('Instancia de Mongo desconectada!');
+          console.log("Instancia de Mongo desconectada!");
           res();
         });
       }
     });
   }
-}
 
-module.exports = Mongo;
+  return { connect, disconnect, instance: () => instance };
+})();
+
+// class Mongo {
+//   constructor() {
+//     this.instance = null;
+//     this.disconnecting = false;
+//   }
+//
+//   connect() {
+//     return new Promise((res, rej) => {
+//       MongoClient.connect(
+//         mongoURL,
+//         { useNewUrlParser: true },
+//         (err, client) => {
+//           if (err) rej(err);
+//           console.log("Conectado a la base de datos satisfactoriamente");
+//           this.instance = client;
+//           res(client.db(dbName));
+//         }
+//       );
+//     });
+//   }
+//
+//   disconnect() {
+//     return new Promise((res, rej) => {
+//       if (this.instance && !this.disconnecting) {
+//         this.disconnecting = true;
+//         console.log("Desconectando instancia de Mongo");
+//         this.instance.close(err => {
+//           if (err) {
+//             rej(err);
+//             this.disconnecting = false;
+//             return;
+//           }
+//           console.log('Instancia de Mongo desconectada!');
+//           res();
+//         });
+//       }
+//     });
+//   }
+// }
+//
+// module.exports = Mongo;
