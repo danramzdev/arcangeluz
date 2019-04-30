@@ -3,7 +3,7 @@ module.exports = [
     id: "1",
     name: "nemaiah",
     description:
-      "Como primer arcángel procura el entendimiento que nos hará reconocer a las personas a las que estamos ligados de forma karmica y ademas procura el encuentro. También sirve para prosperar , domina sobre los grandes capitanes, almirantes y generales y los que combaten las causas justas, serán valientes y tendrán grandeza de alma, capaces de soportar fatigas de forma valerosa. También distingue a personas de vanguardia, aquellos con ideas nuevas, ya que en este caso el trabajo sera arduo , les da la capacidad intelectual para poder triunfar.",
+      "Como primer arcángel procura el entendimiento que nos hará reconocer a las personas a las que estamos ligados de forma karmica y ademas procura el encuentro. También sirve para prosperar, domina sobre los grandes capitanes, almirantes y generales y los que combaten las causas justas, serán valientes y tendrán grandeza de alma, capaces de soportar fatigas de forma valerosa. También distingue a personas de vanguardia, aquellos con ideas nuevas, ya que en este caso el trabajo sera arduo, les da la capacidad intelectual para poder triunfar.",
     link: "",
     dayFrom: "1",
     dayTo: "5",
@@ -212,7 +212,7 @@ module.exports = [
     id: "20",
     name: "elemiah",
     description:
-      "Si has nacido bajo su influencia, tendrás la capacidad para materializar ideas nuevas, para inventar , emprender y sentar las bases de empresas importantes; además gozarán de intuición especial para descubrir intenciones ocultas de los demás. Puedes dirigirte a este Serafín cuando necesites rectificar algo mal hecho, siempre y cuando el amor sea tu guía y tus intenciones sean puras.",
+      "Si has nacido bajo su influencia, tendrás la capacidad para materializar ideas nuevas, para inventar, emprender y sentar las bases de empresas importantes; además gozarán de intuición especial para descubrir intenciones ocultas de los demás. Puedes dirigirte a este Serafín cuando necesites rectificar algo mal hecho, siempre y cuando el amor sea tu guía y tus intenciones sean puras.",
     link: "",
     dayFrom: "5",
     dayTo: "9",
@@ -223,7 +223,7 @@ module.exports = [
     id: "21",
     name: "mahasiah",
     description:
-      "Las personas nacidas con esta influencia aprenderán con facilidad todo aquello que se propongan , estos dominan en las altas ciencias, la filosofía oculta, la teología, y las artes liberales, estarán incluso capacitadas para saber interpretar cualquier señal en la vida y descifrar su mensaje, suelen ser de aspecto físico agradable. Es un Serafín ideal para recuperar la salud, y se invoca para pedir paz y relaciones armoniosas.",
+      "Las personas nacidas con esta influencia aprenderán con facilidad todo aquello que se propongan, estos dominan en las altas ciencias, la filosofía oculta, la teología, y las artes liberales, estarán incluso capacitadas para saber interpretar cualquier señal en la vida y descifrar su mensaje, suelen ser de aspecto físico agradable. Es un Serafín ideal para recuperar la salud, y se invoca para pedir paz y relaciones armoniosas.",
     link: "",
     dayFrom: "10",
     dayTo: "14",
@@ -245,7 +245,7 @@ module.exports = [
     id: "23",
     name: "achaia",
     description:
-      "Se invoca para pedir paciencia y buen hacer, otorga paciencia para soportar las calamidades de la vida , combate la pereza, la negligencia y despreocupación. Las personas influenciadas por este Serafín tienen la facilidad para descubrir el sentido de la vida cuando se a perdido la fe en todo, capacidad de innovar y de ver lo que está más allá de los hechos probados, son hábiles, prácticos, curiosos y activos.",
+      "Se invoca para pedir paciencia y buen hacer, otorga paciencia para soportar las calamidades de la vida, combate la pereza, la negligencia y despreocupación. Las personas influenciadas por este Serafín tienen la facilidad para descubrir el sentido de la vida cuando se a perdido la fe en todo, capacidad de innovar y de ver lo que está más allá de los hechos probados, son hábiles, prácticos, curiosos y activos.",
     link: "",
     dayFrom: "21",
     dayTo: "25",
@@ -388,7 +388,7 @@ module.exports = [
     id: "36",
     name: "pahalial",
     description:
-      "Las personas influenciadas por el , saben perfectamente distinguir qué conducta es la adecuada en todo momento, son personas con gusto por la teología, la moralidad, posiblemente influidas por la castidad y la piedad. Se invoca para tener protección contra las creencias de libertinaje y al error.",
+      "Las personas influenciadas por el, saben perfectamente distinguir qué conducta es la adecuada en todo momento, son personas con gusto por la teología, la moralidad, posiblemente influidas por la castidad y la piedad. Se invoca para tener protección contra las creencias de libertinaje y al error.",
     link: "",
     dayFrom: "28",
     dayTo: "2",
@@ -432,7 +432,7 @@ module.exports = [
     id: "40",
     name: "haihuiah",
     description:
-      "Las personas nacidas bajo su influencia, amarán la verdad y las ciencias exactas, son sinceras en palabras y acciones. Este Trono se invoca para pedir la misericordia de dios, protege de la venganza, preserva de ladrones y asesinos, Angel adecuado , para personas que por un motivo u otro, se ven obligadas a huir, esta huida puede interpretarse como huida de sí mismo, de su destino, obligaciones, etc.",
+      "Las personas nacidas bajo su influencia, amarán la verdad y las ciencias exactas, son sinceras en palabras y acciones. Este Trono se invoca para pedir la misericordia de dios, protege de la venganza, preserva de ladrones y asesinos, Angel adecuado, para personas que por un motivo u otro, se ven obligadas a huir, esta huida puede interpretarse como huida de sí mismo, de su destino, obligaciones, etc.",
     link: "",
     dayFrom: "19",
     dayTo: "23",
@@ -465,7 +465,7 @@ module.exports = [
     id: "43",
     name: "ierathel",
     description:
-      "Angel de luz que pertenece a la Dominación, se invoca para confundir a los malvados y calumniadores, protege contra las personas que atacan y provocan, librando así de enemigos. Las personas influenciadas por él, son personas amantes de la justicia, la paz, la ciencia y las artes, se distinguen en literatura , intentando mostrar esa paz y justicia mediante los escritos. ",
+      "Angel de luz que pertenece a la Dominación, se invoca para confundir a los malvados y calumniadores, protege contra las personas que atacan y provocan, librando así de enemigos. Las personas influenciadas por él, son personas amantes de la justicia, la paz, la ciencia y las artes, se distinguen en literatura, intentando mostrar esa paz y justicia mediante los escritos. ",
     link: "",
     dayFrom: "3",
     dayTo: "7",
@@ -476,7 +476,7 @@ module.exports = [
     id: "44",
     name: "seheiah",
     description:
-      "Protege y refuerza la salud y bienestar físico, este Ángel cuida de la salud en general y procura que la vida de sus protegidos sea larga y apacible. Las personas que cuentan con su presencia poseen generalmente el don de la curación y gracias también a esta benéfica influencia , saben aplicar juicios correctos guiados por la prudencia.",
+      "Protege y refuerza la salud y bienestar físico, este Ángel cuida de la salud en general y procura que la vida de sus protegidos sea larga y apacible. Las personas que cuentan con su presencia poseen generalmente el don de la curación y gracias también a esta benéfica influencia, saben aplicar juicios correctos guiados por la prudencia.",
     link: "",
     dayFrom: "8",
     dayTo: "13",
@@ -520,7 +520,7 @@ module.exports = [
     id: "48",
     name: "vasariah",
     description:
-      "Los que se encuentran bajo su protección directa, cuentan con la facultad de ser piadosos con los demás, pero no por siempre pena, si no para encontrar la manera de que todos tengamos los mismos derechos , los ayuda a ser humilde en sus apreciaciones y juicios, a ser tolerante con las debilidades y fallos ajenos. Se invoca su fuerza y poder para tener protección contra los que nos atacan, protege de todo lo relacionado con las leyes, y la justicia.",
+      "Los que se encuentran bajo su protección directa, cuentan con la facultad de ser piadosos con los demás, pero no por siempre pena, si no para encontrar la manera de que todos tengamos los mismos derechos, los ayuda a ser humilde en sus apreciaciones y juicios, a ser tolerante con las debilidades y fallos ajenos. Se invoca su fuerza y poder para tener protección contra los que nos atacan, protege de todo lo relacionado con las leyes, y la justicia.",
     link: "",
     dayFrom: "29",
     dayTo: "2",
@@ -608,7 +608,7 @@ module.exports = [
     id: "56",
     name: "ieiazel",
     description:
-      "A las personas influenciadas por este Ángel , les apasionara el arte ya sea, escritura, pintura, etc, pues supone un medio de comunicar sentimientos y emociones, domina sobre la imprenta y escritores, influenciando a los hombres de letras y artistas. Este Ángel nos permite liberarnos de nuestros miedos y nuestras tristezas, nos consuela en el alma y la mente , dándonos la alegría que necesitamos para vivir. Ahuyenta enemigos tanto internos como externos.",
+      "A las personas influenciadas por este Ángel, les apasionara el arte ya sea, escritura, pintura, etc, pues supone un medio de comunicar sentimientos y emociones, domina sobre la imprenta y escritores, influenciando a los hombres de letras y artistas. Este Ángel nos permite liberarnos de nuestros miedos y nuestras tristezas, nos consuela en el alma y la mente, dándonos la alegría que necesitamos para vivir. Ahuyenta enemigos tanto internos como externos.",
     link: "",
     dayFrom: "9",
     dayTo: "13",
@@ -773,7 +773,7 @@ module.exports = [
     id: "71",
     name: "mebahiah",
     description:
-      "Las personas influenciadas por él , tendrán una percepción de la realidad elevada, gracias a su intelecto, a sus percepciones cerebrales, eso le permitirá analizar cada una de las situaciones con las que se encuentren en su vida, siempre se regirán por principios morales, tanto en lo referente a su pasado, presente y futuro. Proporciona una importante claridad del intelecto, es el gran protector de la infancia.",
+      "Las personas influenciadas por él, tendrán una percepción de la realidad elevada, gracias a su intelecto, a sus percepciones cerebrales, eso le permitirá analizar cada una de las situaciones con las que se encuentren en su vida, siempre se regirán por principios morales, tanto en lo referente a su pasado, presente y futuro. Proporciona una importante claridad del intelecto, es el gran protector de la infancia.",
     link: "",
     dayFrom: "23",
     dayTo: "27",

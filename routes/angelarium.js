@@ -6,4 +6,6 @@ module.exports = (app, controller) => {
   app.use("/angelarium", router);
 
   router.get("/", controller.index);
+  router.post("/", controller.result);
+  router.get("/angeles", controller.getAngels);
 };
