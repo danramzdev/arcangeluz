@@ -1,0 +1,31 @@
+.section {
+  .ad__container {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    background: rgba(#000, 0.5);
+    text-align: center;
+
+    .close {
+      cursor: pointer;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      font-size: 54px;
+      line-height: 40px;
+      color: white;
+      position: absolute;
+      bottom: 100%;
+      right: 5%;
+      background-color: rgba(red, 0.5);
+    }
+
+    .ad {
+      width: 728px;
+      height: 90px;
+      display: inline-block;
+    }
+  }
+}

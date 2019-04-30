@@ -1,0 +1,185 @@
+@import './responsive-header';
+
+@media screen and (max-width: 1024px) {
+  div.container {
+    display: block;
+    height: auto;
+  }
+
+  .section {
+    margin-bottom: 20px;
+
+    .ad__container {
+      position: static;
+      background-color: white;
+      margin: 0 0 40px 0;
+      padding: 0;
+      z-index: 0;
+
+      .close {
+        display: none;
+      }
+    }
+
+    .section-results {
+      margin: 0;
+
+      .results-container {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  @include responsive-header-890px;
+
+  .section {
+    .ad__container:before {
+      content: "Publicidad";
+      color: grey;
+      display: block;
+
+      font: {
+        family: $Roboto;
+        size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    div.contenedor {
+      margin: 0 20px 40px;
+
+      form.formulario {
+        h3 {
+          font-size: 40px;
+        }
+
+        p {
+          margin-bottom: 70px;
+        }
+
+        .inputs-container {
+          grid-template: 1fr 1fr / repeat(3, 1fr);
+          grid-gap: 20px;
+
+          .boton {
+            grid-column-start: 2;
+            grid-column-end: 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .section {
+    .ad__container {
+      .ad {
+        width: 300px;
+        height: 250px;
+      }
+    }
+
+    .section-results {
+      .results-container {
+        .results {
+          flex-direction: column;
+
+          .imagen {
+            margin-right: 5px;
+            width: 262px;
+            max-width: 70%;
+          }
+
+          .caracteristicas {
+            width: auto;
+            height: auto;
+            text-align: center;
+
+            .enlace {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .section {
+    .section-results {
+      .results-container {
+        .results {
+          .caracteristicas {
+            .nombre {
+              font-size: 44px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .section {
+    div.contenedor {
+      form.formulario {
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 60px;
+        }
+
+        .inputs-container {
+          grid-template: repeat(4, 1fr) / 1fr;
+          justify-items: center;
+
+          .form-control {
+            width: 300px;
+            max-width: 80%;
+          }
+
+          .boton {
+            width: 200px;
+            max-width: 60%;
+            grid-column: auto
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 342px) {
+  @include responsive-header-342px;
+}
+
+@media screen and (max-width: 327px) {
+  .section {
+    .section-results {
+      .results-container {
+        .results {
+          .caracteristicas {
+            .nombre {
+              font-size: 35px;
+            }
+
+            button:nth-child(4) {
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

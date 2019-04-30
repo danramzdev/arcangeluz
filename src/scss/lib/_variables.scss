@@ -1,0 +1,25 @@
+$Playfair: 'Playfair Display',
+serif;
+$Roboto: 'Roboto',
+sans-serif;
+$black-color: #2e2e2e;
+$violet-color: #7500c2;
+$blue-color: #43acfc;
+$orange-color: #fb7235;
+$menu-items-color: #707070;
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+%form-controls {
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+}
+
+@mixin font-line-hero-h2($size) {
+  font-size: $size;
+  line-height: $size;
+}

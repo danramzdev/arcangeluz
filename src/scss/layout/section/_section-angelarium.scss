@@ -1,0 +1,146 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  div.contenedor {
+    text-align: center;
+    font-family: $Roboto, sans-serif;
+    margin-bottom: 40px;
+
+    form.formulario {
+      h3 {
+        font-size: 58px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        display: inline-block;
+        background-color: $violet-color;
+        color: white;
+        padding: 2px 6px;
+        margin-bottom: 100px;
+      }
+
+      .inputs-container {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr) 120px;
+        grid-gap: 0 2em;
+
+        .form-control {
+          @extend %cursor-pointer;
+          border: 1px solid $violet-color;
+          color: $violet-color;
+          padding: 8px 0;
+        }
+
+        .boton {
+          @extend %cursor-pointer;
+          font-weight: bold;
+          color: white;
+          background-color: $violet-color;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .section-results {
+    margin: 40px 0 0 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .results-container {
+      width: 100%;
+      position: relative;
+      transition: 0.6s ease all;
+
+      &.fuera-angel {
+        transform: translateX(-100%);
+      }
+
+      &.fuera-arcangel {
+        position: absolute;
+        right: -100%;
+        top: 0;
+      }
+
+      &.adentro-arcangel {
+        right: 0;
+      }
+
+      .results {
+        margin: 0 auto;
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .imagen {
+          padding: 0;
+          width: 38%;
+          margin: 5px 40px 5px 5px;
+          box-shadow: 0 0 6px 1px rgba(#000, 0.2);
+
+          img {
+            width: 100%;
+            vertical-align: top;
+          }
+        }
+
+        .caracteristicas {
+          width: calc(62% - 40px);
+          height: 100%;
+          font-family: $Roboto, serif;
+
+          .nombre {
+            font-weight: bold;
+            font-size: 58px;
+            color: $violet-color;
+            text-transform: capitalize;
+          }
+
+          .periodo {
+            color: $orange-color;
+            font-family: $Playfair, serif;
+            font-style: italic;
+            margin-bottom: 10px;
+          }
+
+          .descripcion {
+            color: $violet-color;
+            line-height: 22px;
+            margin-bottom: 20px;
+          }
+
+          .enlace {
+            border: 2px solid $violet-color;
+            background-color: white;
+            margin-bottom: 40px;
+            transition-duration: 0.3s;
+          &:hover {
+            background-color: $violet-color;
+            transform: translateY(-2px);
+            a {
+              color: white;
+            }
+          }
+
+            a {
+              transition-duration: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: $violet-color;
+              padding: 10px 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

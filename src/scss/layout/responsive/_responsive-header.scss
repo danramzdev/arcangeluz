@@ -1,0 +1,56 @@
+@mixin responsive-header-890px {
+  .header {
+    grid-template: 1fr / 1fr 1fr;
+
+    &__menu {
+      padding: 65px 50px;
+      height: 100vh;
+      background-color: $violet-color;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      transition-duration: 0.5s;
+      z-index: 2;
+      border-left: 2px solid darken($violet-color, 5%);
+
+      &.show-menu {
+        right: 0;
+      }
+
+      ul {
+        display: block;
+
+        li {
+          display: block;
+          padding: 10px 40px;
+          border-bottom: 1px solid rgba(white, 0.3);
+
+          a {
+            color: white;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+  }
+}
+
+@mixin responsive-header-342px {
+  .header {
+    &__menu {
+      padding: 65px 32px;
+
+      ul {
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import './responsive-header';
+
+@media screen and (max-width: 1024px) {
+  div.container {
+    height: auto;
+
+    .header,
+    .section-home {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  @include responsive-header-890px;
+
+  .section-home {
+    .hero {
+      margin-bottom: 50px;
+
+      h2 {
+        @include font-line-hero-h2(54px);
+      }
+
+      .blue-bar {
+        top: 77px;
+        width: 516px;
+        height: 24px;
+      }
+    }
+
+    .form-newsletter {
+      .input-container {
+
+        input,
+        button {
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .section-home {
+    .hero {
+      margin-bottom: 30px;
+
+      h2 {
+        @include font-line-hero-h2(40px);
+      }
+
+      .blue-bar {
+        top: 55px;
+        width: 442px;
+        height: 20px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .form-newsletter {
+      width: auto;
+      font-size: 13px;
+
+      p {
+        letter-spacing: 1px;
+      }
+
+      .input-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        input,
+        button {
+          font-size: 12px;
+        }
+
+        input {
+          width: 400px;
+          max-width: 80%;
+          margin-bottom: 10px;
+        }
+
+        button {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .section-home {
+    .form-newsletter {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .section-home {
+    .hero {
+      h2 {
+        @include font-line-hero-h2(32px)
+      }
+
+      .blue-bar {
+        top: 44px;
+        width: 379px;
+        height: 17px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 342px) {
+  @include responsive-header-342px;
+
+  .section-home {
+    .hero {
+      .blue-bar {
+        top: 47px;
+        width: 267px;
+        height: 43px;
+      }
+    }
+  }
+}
