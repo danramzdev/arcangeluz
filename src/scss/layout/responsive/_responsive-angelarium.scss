@@ -1,5 +1,26 @@
 @import './responsive-header';
 
+@media screen and (min-width: 1599px) {
+  .section {
+    &-results {
+      .results-container {
+        .results {
+          max-width: 1200px !important;
+          .caracteristicas {
+            .nombre {
+              margin-bottom: 20px;
+            }
+
+            .periodo {
+              margin-bottom: 10px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   div.container {
     display: block;
