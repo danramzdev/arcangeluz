@@ -1,4 +1,5 @@
 const mongo = require("../db/mongo");
+const cacheResponse = require("../utils/cache-response");
 const AngelService = require("../services/angeles");
 const ArcangelService = require("../services/arcangeles");
 
@@ -7,6 +8,7 @@ const arcangelService = new ArcangelService();
 
 class AngelariumController {
   static index(req, res) {
+    cacheResponse(res);
     res.render("angelarium/index");
   }
 
@@ -22,6 +24,7 @@ class AngelariumController {
 
   static async getAngels(req, res, next) {
     try {
+      cacheResponse(res);
       const { angel, arcangel } = req.query;
       const db = await mongo.connect();
       let angelData, arcangelData;
@@ -31,8 +34,6 @@ class AngelariumController {
         arcangelData = await arcangelService.getArcangelById(arcangel);
       }
 
-      console.log(angelData);
-      console.log(arcangelData);
       mongo.disconnect();
       res.render("angelarium/angeles", {
         angel: angelData,
