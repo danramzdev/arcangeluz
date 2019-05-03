@@ -7,19 +7,24 @@ block styles
 block content
   section.section
     .contenedor
-      form.formulario#formulario(action="" method="post")
+      form.formulario#form(action="" method="post")
         h3 ¿Quién es tu ángel protector?
         p Ingresa tu fecha de nacimiento y descubre quién es tu ángel y tu arcángel guardián...
         .inputs-container
           .sel.sel--day
             select#day(name="day")
+              option(disabled) Día
           .sel.sel--month
             select#month(name="month")
+              option(disabled) Mes
           .sel.sel--year
             select#year(name="year")
+              option(disabled) Año
           button.boton(type="submit") DESCUBRIR
 
 block append scripts
   script(src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous")
-  script(src="/static/js/index.angelarium.js")
+  script(src="/static/js/selects-date.js")
   script(src="/static/js/custom-select.js")
+  script(src="/static/js/birth-input.js")
+  script(src="/static/js/validate-index-angelarium.js")
