@@ -1,5 +1,6 @@
 // External libraries
 const express = require("express");
+const helmet = require("helmet");
 
 // Internal libraries
 const path = require("path");
@@ -28,6 +29,9 @@ app.set("view engine", "pug");
 
 // Static files
 app.use("/static", express.static(path.join(__dirname, "public")));
+
+// Helmet middleware
+app.use(helmet());
 
 // Routes
 require("./routes")(app, indexController);
