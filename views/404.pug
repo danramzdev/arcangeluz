@@ -1,0 +1,13 @@
+extends layout
+
+block prepend styles
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css")
+
+block content
+  .container
+    figure.image
+      img(src="/static/img/undraw_page_not_found.png" style="max-height:70%;")
+  section.hero.is-danger
+    .hero-body
+      .container
+        h1.title Page not found! 😕

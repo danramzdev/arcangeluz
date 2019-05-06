@@ -1,0 +1,13 @@
+extends layout
+
+block prepend styles
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css")
+
+block content
+  .container
+    article.message.is-danger
+      .message-body
+        h1.title.has-text-danger= error.message
+        h2.subtitle.has-text-danger= error.status
+        if error.stack
+          pre.content.is-small #{error.stack}

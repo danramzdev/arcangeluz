@@ -1,14 +1,22 @@
 // External libraries
 const express = require("express");
+const boom = require("@hapi/boom");
 const helmet = require("helmet");
 
 // Internal libraries
 const path = require("path");
 
 // Project requires
+const isRequestAjaxOrApi = require("./utils/isRequestAjaxOrApi");
 const {
   config: { port }
 } = require("./config");
+const {
+  logErrors,
+  wrapErrors,
+  clientErrorHandler,
+  errorHandler
+} = require("./utils/middlewares/errorHandlers");
 
 // Controllers requires
 const indexController = require("./controllers");
@@ -38,6 +46,25 @@ require("./routes")(app, indexController);
 require("./routes/sonos")(app, sonosController);
 require("./routes/angelus")(app, angelusController);
 require("./routes/angelarium")(app, angelariumController);
+
+// 404 error
+app.use(function(req, res, next) {
+  if (isRequestAjaxOrApi(req)) {
+    const {
+      output: { statusCode, payload }
+    } = boom.notFound();
+
+    res.status(statusCode).json(payload);
+  }
+
+  res.status(404).render("404");
+});
+
+// Error Middleware
+app.use(logErrors);
+app.use(wrapErrors);
+app.use(clientErrorHandler);
+app.use(errorHandler);
 
 // Server init
 app.listen(port, () => {
