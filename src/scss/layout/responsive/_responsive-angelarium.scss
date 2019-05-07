@@ -22,13 +22,33 @@
 }
 
 @media screen and (max-width: 1024px) {
-  div.container {
+  div.container-flex {
     display: block;
     height: auto;
   }
 
+
   .section {
     margin-bottom: 20px;
+
+    div.contenedor {
+      margin: 10% 0;
+      max-width: 800px;
+
+      form.formulario {
+        .inputs-container {
+          .sel {
+            font-size: 0.75rem;
+          }
+
+          .sel.active {
+            .sel__box {
+              max-height: 140px;
+            }
+          }
+        }
+      }
+    }
 
     .ad__container {
       position: static;
@@ -165,9 +185,8 @@
           grid-template: repeat(4, 1fr) / 1fr;
           justify-items: center;
 
-          .form-control {
-            width: 300px;
-            max-width: 80%;
+          .sel {
+            width: 200px;
           }
 
           .boton {
