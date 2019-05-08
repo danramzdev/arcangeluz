@@ -1,9 +1,7 @@
-const Mongo = require("../mongo");
+const mongo = require("../mongo");
 const arcangelesMock = require("../../utils/mocks/arcangeles");
 const argv = require("yargs").argv;
 const chalk = require("chalk");
-
-const mongo = new Mongo();
 
 if (argv.fill) {
   mongo.connect().then(db => {
