@@ -8,32 +8,39 @@ html(lang="es")
     link(href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet")
     block styles
       link(rel="stylesheet" href="/static/css/styles.css")
+    // Google Tag Manager
+    script (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P3G5XGZ');
+    // End Google Tag Manager
   body
-    .container-flex#container
-      header.header
-        h2.header__brand
-          a(href="/") arcangeluz
-        nav.header__menu#menu
-          ul
-            li
-              a(href="/angelarium") angelarium
-            li
-              a(href="/angelus") angelus
-            li
-              a(href="/sonos") sonos
-        .hamburger-menu#hamburger-menu
-          .bar.top-bar
-          .bar.middle-bar
-          .bar.bottom-bar
-      block content
-      footer.footer
-        .footer__platform
-          p Una plataforma de
-            |
-            |
-            a(href="https://chamelimantra.com/") Chameli Mantra
-        .footer__terms
-          a Política de Privacidad
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-P3G5XGZ" height="0" width="0" style="display:none;visibility:hidden")
+    // End Google Tag Manager (noscript)
+  .container-flex#container
+    header.header
+      h2.header__brand
+        a(href="/") arcangeluz
+      nav.header__menu#menu
+        ul
+          li
+            a(href="/angelarium") angelarium
+          li
+            a(href="/angelus") angelus
+          li
+            a(href="/sonos") sonos
+      .hamburger-menu#hamburger-menu
+        .bar.top-bar
+        .bar.middle-bar
+        .bar.bottom-bar
+    block content
+    footer.footer
+      .footer__platform
+        p Una plataforma de
+          |
+          |
+          a(href="https://chamelimantra.com/") Chameli Mantra
+      .footer__terms
+        a Política de Privacidad
 
-    block scripts
-      script(src="/static/js/menu.js")
+  block scripts
+    script(src="/static/js/menu.js")
