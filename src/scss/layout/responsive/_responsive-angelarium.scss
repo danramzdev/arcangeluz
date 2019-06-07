@@ -1,4 +1,4 @@
-@import './responsive-header';
+@import "./responsive-header";
 
 @media screen and (min-width: 1599px) {
   .section {
@@ -22,11 +22,10 @@
 }
 
 @media screen and (max-width: 1024px) {
-  div.container-flex {
+  /*div.container-flex {
     display: block;
     height: auto;
-  }
-
+  }*/
 
   .section {
     margin-bottom: 20px;
@@ -192,7 +191,7 @@
           .boton {
             width: 200px;
             max-width: 60%;
-            grid-column: auto
+            grid-column: auto;
           }
         }
       }

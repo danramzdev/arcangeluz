@@ -1,4 +1,4 @@
-@import './responsive-header';
+@import "./responsive-header";
 
 @media screen and (max-width: 1024px) {
   div.container {
@@ -31,7 +31,6 @@
 
     .form-newsletter {
       .input-container {
-
         input,
         button {
           letter-spacing: 0;
@@ -44,7 +43,7 @@
 @media screen and (max-width: 690px) {
   .section-home {
     .hero {
-      margin-bottom: 30px;
+      margin-bottom: 60px;
 
       h2 {
         @include font-line-hero-h2(40px);
@@ -106,7 +105,7 @@
   .section-home {
     .hero {
       h2 {
-        @include font-line-hero-h2(32px)
+        @include font-line-hero-h2(32px);
       }
 
       .blue-bar {
