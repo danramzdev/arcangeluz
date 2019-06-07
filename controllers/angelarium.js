@@ -16,7 +16,7 @@ class AngelariumController {
     const { day, month, cumple } = req.body;
 
     res.redirect(
-      `/angelarium/angeles?angel=${angel(day, month)}&arcangel=${arcangel(
+      `/calendario/angeles?angel=${angel(day, month)}&arcangel=${arcangel(
         cumple
       )}`
     );
