@@ -1,4 +1,32 @@
 .section-home {
+  .container-form-res {
+    .form-res {
+      top: -100px;
+      left: 0;
+      width: calc(100vw - 50px);
+      margin: 0 25px;
+      position: relative;
+      display: inline-block;
+      padding: 40px 80px;
+      border-radius: 6px;
+      text-align: center;
+
+      h4 {
+        display: block;
+      }
+
+      &.success {
+        background-color: $success-color;
+        color: white;
+      }
+
+      &.error {
+        background-color: $error-color;
+        color: white;
+      }
+    }
+  }
+
   display: flex;
   flex-direction: column;
   flex: 1;

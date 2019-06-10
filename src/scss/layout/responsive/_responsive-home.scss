@@ -134,3 +134,18 @@
     }
   }
 }
+
+@media screen and (max-height: 790px) {
+  @include responsive-form-res(max, 762px, -60px);
+  @include responsive-form-res(max, 776px, -30px);
+}
+
+@media screen and (max-height: 710px) {
+  @include responsive-form-res(min, 890px, -60px);
+  @include responsive-form-res(max, 380px, -10px);
+}
+
+@media screen and (max-height: 628px) {
+  @include responsive-form-res(min, 890px, -10px);
+  @include responsive-form-res(max, 890px, -10px);
+}

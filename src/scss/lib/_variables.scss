@@ -1,12 +1,12 @@
-$Playfair: 'Playfair Display',
-serif;
-$Roboto: 'Roboto',
-sans-serif;
+$Playfair: "Playfair Display", serif;
+$Roboto: "Roboto", sans-serif;
 $black-color: #2e2e2e;
 $violet-color: #7500c2;
 $blue-color: #43acfc;
 $orange-color: #fb7235;
 $menu-items-color: #707070;
+$success-color: #2ecc71;
+$error-color: #e74c3c;
 
 %cursor-pointer {
   cursor: pointer;
@@ -22,4 +22,16 @@ $menu-items-color: #707070;
 @mixin font-line-hero-h2($size) {
   font-size: $size;
   line-height: $size;
+}
+
+@mixin responsive-form-res($type, $width, $top) {
+  @media (#{$type}-width: $width) {
+    .section-home {
+      .container-form-res {
+        .form-res {
+          top: $top;
+        }
+      }
+    }
+  }
 }
