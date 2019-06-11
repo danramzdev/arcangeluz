@@ -10,7 +10,7 @@ block content
         else if res.type == 'error'
           .form-res.error
             h4= res.msg
-        //script(src="/static/js/disappear.js")
+        
     .hero
       h2 Entra en comunión con los ángeles y arcángeles
       .blue-bar
@@ -21,3 +21,6 @@ block content
         input(type="text" name="arc_name" placeholder="NOMBRE")
         input(type="email" name="arc_email" placeholder="CORREO ELECTRÓNICO")
         button(type="submit") UNIRME
+
+block append scripts
+  script(src="/static/js/disappear.js")
