@@ -9,8 +9,7 @@ block content
             h4= res.msg
         else if res.type == 'error'
           .form-res.error
-            h4= res.msg
-        
+            h4= res.msg        
     .hero
       h2 Entra en comunión con los ángeles y arcángeles
       .blue-bar
@@ -24,3 +23,4 @@ block content
 
 block append scripts
   script(src="/static/js/disappear.js")
+  script(src="/static/js/validate-newsletter.js")
