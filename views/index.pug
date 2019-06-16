@@ -17,6 +17,7 @@ block content
     form.form-newsletter(method="post")
       p recibe artículos e información justo en tu bandeja de entrada
       .input-container
+        input(type="hidden" name="_csrf" value=`${csrfToken}`)
         input(type="text" name="arc_name" placeholder="NOMBRE")
         input(type="email" name="arc_email" placeholder="CORREO ELECTRÓNICO")
         button(type="submit") UNIRME

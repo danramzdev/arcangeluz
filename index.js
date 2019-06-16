@@ -2,6 +2,7 @@
 const express = require("express");
 const boom = require("@hapi/boom");
 const helmet = require("helmet");
+const cookieParser = require("cookie-parser");
 
 // Internal libraries
 const path = require("path");
@@ -26,6 +27,9 @@ const sonosController = require("./controllers/sonos");
 
 // Express init
 const app = express();
+
+// Middleware
+app.use(cookieParser());
 
 // Middleware parsing
 app.use(express.json()); // for parsing application/json
