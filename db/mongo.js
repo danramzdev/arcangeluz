@@ -1,10 +1,13 @@
 const MongoClient = require("mongodb").MongoClient;
 
 const {
-  config: { dbHost, dbPort, dbName }
+  config: { dbHost, dbPort, dbName, dbUser, dbPass }
 } = require("../config");
 
-const mongoURL = `mongodb://${dbHost}:${dbPort}`;
+const USER = encodeURIComponent(dbUser);
+const PASS = encodeURIComponent(dbPass);
+
+const mongoURL = `mongodb://${dbUser}:${PASS}@${dbHost}:${dbPort}/${dbName}`;
 
 module.exports = (() => {
   let instance = null,
