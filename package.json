@@ -1,7 +1,7 @@
 {
   "name": "arcangeluz",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Arcangeluz app",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -11,20 +11,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/boom": "^7.4.2",
+    "@hapi/boom": "^9.0.0",
     "cookie-parser": "^1.4.4",
-    "csurf": "^1.10.0",
-    "dotenv": "^7.0.0",
-    "express": "^4.16.4",
-    "helmet": "^3.17.0",
-    "mailchimp-api-v3": "^1.13.0",
-    "mongodb": "^3.2.3",
-    "pug": "^2.0.3",
-    "yargs": "^13.2.2"
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mailchimp-api-v3": "^1.13.1",
+    "mongodb": "^3.5.2",
+    "pug": "^2.0.4",
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
-    "chalk": "^2.4.2",
-    "nodemon": "^1.18.11",
-    "prettier": "^1.17.0"
+    "chalk": "^3.0.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   }
 }
