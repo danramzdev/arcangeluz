@@ -1,12 +1,14 @@
-const mongo = require("../db/mongo");
-const {
-  config: { dbName }
-} = require("../config");
+const Mongo = require("../db/mongo");
 
 class AngelService {
-  getAngelById(id) {
-    const db = mongo.instance().db(dbName);
-    return db.collection("angeles").findOne({ id: id });
+  constructor() {
+    this.mongoDB = new Mongo();
+    this.collection = "angeles";
+  }
+
+  async getAngelById(id) {
+    const db = await this.mongoDB.connect();
+    return await db.collection(this.collection).findOne({ id: id });
   }
 }
 

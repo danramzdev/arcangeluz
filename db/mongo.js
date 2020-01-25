@@ -1,50 +1,40 @@
 const MongoClient = require("mongodb").MongoClient;
 
 const {
-  config: { dbHost, dbPort, dbName, dbUser, dbPass }
+  config: { dev, dbHost, dbPort, dbName, dbUser, dbPass }
 } = require("../config");
 
 const USER = encodeURIComponent(dbUser);
 const PASS = encodeURIComponent(dbPass);
 
-const mongoURL = `mongodb://${dbUser}:${PASS}@${dbHost}:${dbPort}/${dbName}`;
+const mongoURL = dev
+  ? `mongodb://${dbHost}:${dbPort}/${dbName}`
+  : `mongodb://${USER}:${PASS}@${dbHost}:${dbPort}/${dbName}`;
 
-module.exports = (() => {
-  let instance = null,
-    disconnecting = false;
-
-  function connect() {
-    return new Promise((res, rej) => {
-      MongoClient.connect(
-        mongoURL,
-        { useNewUrlParser: true },
-        (err, client) => {
-          if (err) rej(err);
-          console.log("Conectado a la base de datos satisfactoriamente");
-          instance = client;
-          res(client.db(dbName));
-        }
-      );
+class Mongo {
+  constructor() {
+    this.client = new MongoClient(mongoURL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     });
+    this.dbName = dbName;
   }
 
-  function disconnect() {
-    return new Promise((res, rej) => {
-      if (instance && !disconnecting) {
-        disconnecting = true;
-        console.log("Desconectando instancia de Mongo");
-        instance.close(err => {
+  connect() {
+    if (!Mongo.connection) {
+      return new Promise((res, rej) => {
+        Mongo.connection = this.client.connect(err => {
           if (err) {
             rej(err);
-            disconnecting = false;
-            return;
           }
-          console.log("Instancia de Mongo desconectada!");
-          res();
-        });
-      }
-    });
-  }
 
-  return { connect, disconnect, instance: () => instance };
-})();
+          res(this.client.db(this.dbName));
+        });
+      });
+    }
+
+    return Mongo.connection;
+  }
+}
+
+module.exports = Mongo;
