@@ -36,7 +36,7 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // Template Engine Set
-app.set("views", "./views");
+app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "pug");
 
 // Static files
