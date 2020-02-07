@@ -1,5 +1,5 @@
 const Mailchimp = require("mailchimp-api-v3");
-const cacheResponse = require("../utils/cache-response");
+const cacheResponse = require("../utils/cacheResponse");
 const {
   config: { mcApiKey }
 } = require("../config");

@@ -1,4 +1,4 @@
-const cacheResponse = require("../utils/cache-response");
+const cacheResponse = require("../utils/cacheResponse");
 
 class SonosController {
   static index(req, res) {

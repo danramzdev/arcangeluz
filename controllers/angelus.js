@@ -1,4 +1,4 @@
-const cacheResponse = require("../utils/cache-response");
+const cacheResponse = require("../utils/cacheResponse");
 
 class AngelusController {
   static index(req, res) {
