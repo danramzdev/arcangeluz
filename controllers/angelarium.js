@@ -1,11 +1,11 @@
-const AngelService = require("../services/angeles");
-const ArcangelService = require("../services/arcangeles");
-const angelId = require("../utils/helpers/angelId");
-const archangelesId = require("../utils/helpers/archangelesId");
+const AngelsService = require("../services/angels");
+const ArchangelsService = require("../services/archangels");
+const angelsId = require("../utils/helpers/angelsId");
+const archangelsId = require("../utils/helpers/archangelsId");
 const cacheResponse = require("../utils/cacheResponse");
 
-const angelService = new AngelService();
-const arcangelService = new ArcangelService();
+const angelsService = new AngelsService();
+const archangelsService = new ArchangelsService();
 
 class AngelariumController {
   static index(req, res) {
@@ -14,11 +14,11 @@ class AngelariumController {
   }
 
   static result(req, res) {
-    const { day, month, cumple } = req.body;
+    const { day, month, birth } = req.body;
 
     res.redirect(
-      `/calendario/angeles?angel=${angelId(day, month)}&arcangel=${archangelesId(
-        cumple
+      `/calendario/angeles?angel=${angelsId(day, month)}&arcangel=${archangelsId(
+        birth
       )}`
     );
   }
@@ -29,8 +29,8 @@ class AngelariumController {
       const { angel, arcangel } = req.query;
       let angelData, arcangelData;
 
-      angelData = await angelService.getAngelById(angel);
-      arcangelData = await arcangelService.getArcangelById(arcangel);
+      angelData = await angelsService.getAngelById(angel);
+      arcangelData = await archangelsService.getArchangelById(arcangel);
 
       res.render("angelarium/angeles", {
         angel: angelData,

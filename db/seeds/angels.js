@@ -1,13 +1,13 @@
-// DEBUG=app:* node db/seeds/angeles.js
+// DEBUG=app:* node db/seeds/angels.js --fill || --clear
 
 const Mongo = require("../mongo");
-const debug = require("debug")("app:db:seeds:angeles");
+const debug = require("debug")("app:db:seeds:angels");
 const argv = require("yargs").argv;
 const chalk = require("chalk");
-const angelesMock = require("../../utils/mocks/angeles");
+const angelesMock = require("../../utils/mocks/angels");
 
 const mongo = new Mongo();
-const collection = "angeles";
+const collection = "angels";
 
 if (argv.fill) {
   mongo.connect().then(db => {

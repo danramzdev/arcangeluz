@@ -1,15 +1,15 @@
 const Mongo = require("../db/mongo");
 
-class AngelService {
+class ArchangelsService {
   constructor() {
     this.mongoDB = new Mongo();
-    this.collection = "angeles";
+    this.collection = "archangels";
   }
 
-  async getAngelById(id) {
+  async getArchangelById(id) {
     const db = await this.mongoDB.connect();
     return await db.collection(this.collection).findOne({ id: id });
   }
 }
 
-module.exports = AngelService;
+module.exports = ArchangelsService;

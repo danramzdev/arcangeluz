@@ -45,7 +45,7 @@ function createOption(parent, value) {
 
 function createBirthInput() {
   input = document.createElement("input");
-  input.setAttribute("name", "cumple");
+  input.setAttribute("name", "birth");
   input.style.display = "none";
   form.appendChild(input);
 }
