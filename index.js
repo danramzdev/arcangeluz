@@ -24,6 +24,7 @@ const indexController = require("./controllers");
 const angelariumController = require("./controllers/angelarium");
 const angelusController = require("./controllers/angelus");
 const sonosController = require("./controllers/sonos");
+const calendarController = require("./controllers/api/calendar");
 
 // Express init
 const app = express();
@@ -50,6 +51,7 @@ require("./routes")(app, indexController);
 require("./routes/sonos")(app, sonosController);
 require("./routes/angelus")(app, angelusController);
 require("./routes/angelarium")(app, angelariumController);
+require("./routes/api/calendar")(app, calendarController);
 
 // 404 error
 app.use(function(req, res, next) {
