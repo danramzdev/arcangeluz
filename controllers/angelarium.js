@@ -13,28 +13,20 @@ class AngelariumController {
     res.render("angelarium/index");
   }
 
-  static result(req, res) {
+  static async getAngels(req, res, next) {
     const { day, month, birth } = req.body;
 
-    res.redirect(
-      `/calendario/angeles?angel=${angelsId(day, month)}&arcangel=${archangelsId(
-        birth
-      )}`
-    );
-  }
+    const angelId = angelsId(day, month);
+    const archangelId = archangelsId(birth);
 
-  static async getAngels(req, res, next) {
     try {
       cacheResponse(res);
-      const { angel, arcangel } = req.query;
-      let angelData, arcangelData;
-
-      angelData = await angelsService.getAngelById(angel);
-      arcangelData = await archangelsService.getArchangelById(arcangel);
+      const angel = await angelsService.getAngelById(angelId);
+      const arcangel = await archangelsService.getArchangelById(archangelId);
 
       res.render("angelarium/angeles", {
-        angel: angelData,
-        arcangel: arcangelData
+        angel,
+        arcangel
       });
     } catch (e) {
       next(e);

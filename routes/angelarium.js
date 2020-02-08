@@ -6,6 +6,5 @@ module.exports = (app, controller) => {
   app.use("/calendario", router);
 
   router.get("/", controller.index);
-  router.post("/", controller.result);
-  router.get("/angeles", controller.getAngels);
+  router.post("/", controller.getAngels);
 };
