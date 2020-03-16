@@ -20,7 +20,7 @@
     "mailchimp-api-v3": "^1.13.1",
     "mongodb": "^3.5.2",
     "pug": "^2.0.4",
-    "yargs": "^15.1.0"
+    "yargs": "^15.3.0"
   },
   "devDependencies": {
     "chalk": "^3.0.0",
