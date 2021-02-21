@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "mailchimp-api-v3": "^1.14.0",
-    "mongodb": "^3.5.2",
+    "mongodb": "^3.6.0",
     "pug": "^2.0.4",
     "yargs": "^16.0.0",
     "snyk": "^1.391.1"
