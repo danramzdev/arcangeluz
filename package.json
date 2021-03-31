@@ -23,7 +23,7 @@
     "mongodb": "^3.6.0",
     "pug": "^2.0.4",
     "yargs": "^16.0.0",
-    "snyk": "^1.391.1"
+    "snyk": "^1.518.0"
   },
   "devDependencies": {
     "chalk": "^3.0.0",
